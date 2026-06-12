@@ -1,0 +1,24 @@
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter the String: ");
+        String x=sc.nextLine();
+       String y=x.toLowerCase();
+       int text;
+       int count=0;
+       int n=y.length();
+       char[] b={'a','e','i','o','u'};
+       char[] arr=y.toCharArray();
+       for(char c: arr){
+           System.out.println(c);
+       }
+       for(int i=0;i<n;i++){
+           if(y.charAt(i)=='a' || y.charAt(i)=='e' || y.charAt(i)=='i' || y.charAt(i)=='o' || y.charAt(i)=='u'){
+               count=count+1;
+           }
+       }
+       System.out.println(count);
+
+    }
+}
