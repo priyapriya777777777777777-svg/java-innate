@@ -1,0 +1,32 @@
+import java.util.*;
+import java.lang.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=1234;
+        String str=n+"";
+        int n1=Integer.parseInt(str);
+
+ 
+
+        String numStr = String.valueOf(n1);
+        int[] digits = new int[numStr.length()];
+        for (int i = 0; i < numStr.length(); i++) {
+            digits[i] = Character.getNumericValue(numStr.charAt(i));
+        }
+        System.out.println("Digits array: " + Arrays.toString(digits));
+        
+        
+        int max=0;
+        for(int i=0;i<digits.length;i++){
+            if(digits[i]>max){
+                max=digits[i];
+            }
+        }
+        System.out.println("Maximum value is : "+max);
+        
+        
+     int num = java.util.Arrays.stream(digits).reduce(0, (a, b) -> a * 10 + b);
+     System.out.println(num);
+    }
+}
